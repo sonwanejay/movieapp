@@ -6,7 +6,7 @@ import { MovieProvider } from "./context/Moviecontext";
 import NavBar from "./components/NavBar";
 
 function App() {
-  return (<div className="dark" >
+  return (<div className="dark bg-background min-h-screen" >
     <MovieProvider>
       <main className="bg-background p-4">
         <NavBar />
