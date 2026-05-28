@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import { searchMovies, getPopularMovies } from "../services/api";
-import "../css/Home.css";
 import { Search, AlertCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -48,10 +47,10 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <div className="p-4 box-border w-full">
       <form
         onSubmit={handleSearch}
-        className="flex flex-col items-center justify-center w-full max-w-2xl mx-auto mt-8"
+        className="flex flex-col mb-10 items-center justify-center w-full max-w-2xl mx-auto mt-8"
       >
         <div className="relative flex items-center w-full group">
           <input
@@ -88,7 +87,7 @@ function Home() {
       {loading ? (
         <div className="loading">Loading...</div>
       ) : (
-        <div className="movie-grid">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 p-4 w-full">
           {movies.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))}
