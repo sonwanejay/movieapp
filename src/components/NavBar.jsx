@@ -2,17 +2,34 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="flex h-[46px] items-center justify-between p-2 mx-auto w-full max-w-4xl bg-[#1f1f1f] text-primary rounded-full border">
-      <div className="flex items-center">
-        <div className="w-5 h-5 border-border border rounded-full"></div>
-        <Link to="/" className="mx-2">Movie App</Link>
+    <nav className="flex items-center justify-between mx-auto p-3 w-full max-w-7xl bg-[#1a1a1a] text-white rounded-full border border-[#333] shadow-lg">
+
+      <div className="flex items-center space-x-3">
+        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-white border border-[#333]">
+          <svg
+            className="w-7 h-7 text-black"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 2C6.47 2 2 6.47 2 12c0 5.53 4.47 10 10 10s10-4.47 10-10C22 6.47 17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.29.31-2.51.85-3.6L16.2 16.6C15.11 17.14 13.89 17.45 12.6 17.45zM12 6.55c1.29 0 2.51.31 3.6.85l-11.35 11.35C5.14 17.14 6.36 17.45 7.65 17.45h4.35V6.55zM12 17.45c1.29 0 2.51-.31 3.6-.85l-11.35-11.35C5.14 6.86 6.36 6.55 7.65 6.55H12v10.9z" />
+          </svg>
+        </div>
+        <Link to="/" className="text-2xl font-bold text-white leading-tight">
+          Movie App
+        </Link>
+      </div>
+      <div className="flex items-center space-x-8 font-medium">
+        <Link to="/" className="text-white opacity-90 hover:opacity-100 transition-opacity">
+          Home
+        </Link>
+        <Link to="/favorites" className="text-white opacity-90 hover:opacity-100 transition-opacity">
+          Favorites
+        </Link>
       </div>
       <div className="flex items-center">
-        <div className="px-4">
-          <Link to="/">Home</Link>
-        </div>
-        <div className="px-4">
-          <Link to="/favorites">Favorites</Link>
+        <div className="flex items-center h-11 px-5 py-2 bg-white rounded-full border border-[#e0e0e0] shadow-inner text-black">
+          NekoMovies
         </div>
       </div>
     </nav>
