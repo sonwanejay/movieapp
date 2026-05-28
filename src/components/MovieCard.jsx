@@ -14,6 +14,17 @@ export default function MovieCard({ movie }) {
     else addToFavorite(movie);
   }
 
+  const cardVariants = {
+    hidden: {
+      scale: 1,
+      transition: { duration: 0.3, ease: "easeOut" }
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.3, ease: "easeOut" }
+    }
+  };
+
   const overlayVariants = {
     hidden: {
       clipPath: "circle(0% at 100% 100%)",
@@ -21,13 +32,14 @@ export default function MovieCard({ movie }) {
     },
     hover: {
       clipPath: "circle(120% at 100% 100%)",
-      transition: { duration: 0.4, ease: "easeOut" }
+      transition: { duration: 0.4, delay: 0.2, ease: "easeOut" }
     }
   };
 
   return (
     <motion.div
       className="relative w-full max-w-sm rounded-2xl overflow-hidden bg-gray-900 shadow-xl cursor-pointer text-white"
+      variants={cardVariants}
       initial="hidden"
       whileHover="hover"
     >
