@@ -2,21 +2,21 @@
 
 A dynamic React web application that lets users discover movies, view detailed information, and save their top picks to a personal favorites list
 
-## ✨ Features
+## Features
 
 * **Discover Movies:** Fetches and displays a wide variety of movies using a third-party movie API.
 * **Detailed Information:** Click on any movie to view its specific details, such as the synopsis, release date, rating, and cast.
 * **Favorites:** Easily add movies to your personal favorites list so you never forget what you want to watch next.
 * **Responsive Design:** Works smoothly and looks great on both desktop and mobile devices.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Frontend:** React.js
 * **Styling:** Tailwind CSS
 * **API:** `https://api.themoviedb.org/3`
 * **Routing:** React Router
 
-## 🚀 How to Run the Project Locally
+## How to Run the Project Locally
 
 Follow these steps to get a copy of the project up and running on your local machine.
 
