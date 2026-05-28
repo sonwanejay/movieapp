@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between mx-auto p-3 w-full max-w-7xl bg-[#1a1a1a] text-white rounded-full border border-[#333] shadow-lg">
+    <nav className="flex items-center justify-between mx-auto p-3 w-full max-w-7xl bg-background text-white rounded-full border border-[#333] shadow-lg">
 
       <div className="flex items-center space-x-3">
-        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-white border border-[#333]">
+        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-foreground border border-muted-foreground">
           <svg
             className="w-7 h-7 text-black"
             viewBox="0 0 24 24"
@@ -23,12 +23,12 @@ export default function NavBar() {
         <Link to="/" className="text-white opacity-90 hover:opacity-100 transition-opacity">
           Home
         </Link>
-        <Link to="/favorites" className="text-white opacity-90 hover:opacity-100 transition-opacity">
+        <Link to="/favorites" className="text-foreground opacity-90 hover:opacity-100 transition-opacity">
           Favorites
         </Link>
       </div>
       <div className="flex items-center">
-        <div className="flex items-center h-11 px-5 py-2 bg-white rounded-full border border-[#e0e0e0] shadow-inner text-black">
+        <div className="flex items-center h-11 px-5 py-2 bg-foreground rounded-full border border-background shadow-inner text-black">
           NekoMovies
         </div>
       </div>

@@ -1,4 +1,4 @@
-import "../css/MovieCard.css";
+import { Heart } from "lucide-react";
 import { useMovieContext } from "../context/Moviecontext";
 
 function MovieCard({ movie }) {
@@ -12,23 +12,25 @@ function MovieCard({ movie }) {
   }
 
   return (
-    <div className="movie-card">
-      <div className="movie-poster">
+    <div className="border rounded-4xl overflow-hidden text-foreground">
+      <div className="">
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
         />
-        <div className="movie-overlay">
+        <div className="">
           <button
             className={`favorite-btn ${favorite ? "active" : ""}  `}
             onClick={onFavoriteClick}
-          >
-            ♥
+          >{isFavorite(movie.id) ?
+            (<Heart fill="red" stroke="red" />)
+            : (<Heart />)
+            }
           </button>
         </div>
       </div>
 
-      <div className="movie-info">
+      <div className="">
         <h3>{movie.title}</h3>
         <p>{movie.release_date?.split("-")[0]}</p>
       </div>
